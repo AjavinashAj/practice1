@@ -1,0 +1,472 @@
+###################################JSON#########################################
+#JSON or JavaScript Object Notation is a lightweight text-based open standard designed for human-readable data interchange.
+ and is described in RFC 4627.
+The official Internet media type for JSON is application/json. 
+
+*JSON stands for JavaScript Object Notation.
+*The format was specified by Douglas Crockford.
+*It was designed for human-readable data interchange.
+*It has been extended from the JavaScript scripting language.
+*The filename extension is .json.
+
+JSON Internet Media type is application/json.
+
+The Uniform Type Identifier is public.json.
+
+==================================================Uses of JSON=======================================================================
+*It is used while writing JavaScript based applications that includes browser extensions and websites.
+*JSON format is used for serializing and transmitting structured data over network connection.
+*It is primarily used to transmit data between a server and web applications.
+*Web services and APIs use JSON format to provide public data.
+*It can be used with modern programming languages.
+
+========================================================Characteristics of JSON================================================
+*JSON is easy to read and write.
+*It is a lightweight text-based interchange format.
+*JSON is language independent.
+
+===================================Simple Example in JSON======================================
+The following example shows how to use JSON to store information related to books based on their topic and edition.
+
+{
+   "book": [
+	
+      {
+         "id":"01",
+         "language": "Java",
+         "edition": "third",
+         "author": "Herbert Schildt"
+      },
+	
+      {
+         "id":"07",
+         "language": "C++",
+         "edition": "second",
+         "author": "E.Balagurusamy"
+      }
+   ]
+}
+
+====================================================JSON - Syntax=========================================================
+*Data is represented in name/value pairs.
+*Curly braces hold objects and each name is followed by ':'(colon), the name/value pairs are separated by , (comma).
+*Square brackets hold arrays and values are separated by ,(comma).
+
+=======================================================JSON supports the following two data structures ==================================
+*Collection of name/value pairs − This Data Structure is supported by different programming languages.
+*Ordered list of values − It includes array, list, vector or sequence etc.
+======================================================================================================================================
+========================================================JSON - DataTypes=========================================================
+JSON format supports the following data types −
+
+Sr.No.	Type & Description
+1	Number
+    double- precision floating-point format in JavaScript
+
+2	String
+    double-quoted Unicode with backslash escaping
+	
+3	Boolean  -true or false
+
+4	Array  an ordered sequence of values
+
+5	Value it can be a string, a number, true or false, null etc
+
+6	Object an unordered collection of key:value pairs
+
+7	Whitespace can be used between any pair of tokens
+
+8	null empty
+
+===========================================================Number===============================================
+It is a double precision floating-point format in JavaScript and it depends on implementation.
+Octal and hexadecimal formats are not used.
+No NaN or Infinity is used in Number.
+
+===========================The following table shows the number types ==============================================−
+
+Sr.No.	Type & Description
+
+1	Integer
+    Digits 1-9, 0 and positive or negative
+
+2	Fraction -Fractions like .3, .9
+
+3	Exponent Exponent like e, e+, e-, E, E+, E-
+========================================================================================================================
+====Syntax=====
+var json-object-name = { string : number_value, .......}
+Example
+Example showing Number Datatype, value should not be quoted −
+
+var obj = {marks: 97}
+
+======String===========
+It is a sequence of zero or more double quoted Unicode characters with backslash escaping.
+
+Character is a single character string i.e. a string with length 1.
+
+===================The table shows various special characters that you can use in strings of a JSON document============================== −
+
+Sr.No.	Type & Description
+1	"
+    double quotation
+
+2	\
+    backslash
+
+3	/
+   forward slash
+
+4	b
+    backspace
+
+5	f
+   form feed
+6	n
+   new line
+7	r
+   carriage return
+8	t
+   horizontal tab
+
+9	u
+   four hexadecimal digits
+
+Syntax
+var json-object-name = { string : "string value", .......}
+
+Example showing String Datatype −
+var obj = {name: 'Amit'}
+
+=======Boolean======================
+It includes true or false values.
+
+Syntax
+var json-object-name = { string : true/false, .......}
+Example
+var obj = {name: 'Amit', marks: 97, distinction: true}
+
+==========================Array=========================================================
+It is an ordered collection of values.
+These are enclosed in square brackets which means that array begins with .[. and ends with .]..
+The values are separated by , (comma).
+Array indexing can be started at 0 or 1.
+Arrays should be used when the key names are sequential integers.
+
+Syntax
+[ value, .......]
+
+Example
+Example showing array containing multiple objects −
+
+{
+   "books": [
+      { "language":"Java" , "edition":"second" },
+      { "language":"C++" , "lastName":"fifth" },
+      { "language":"C" , "lastName":"third" }
+   ]
+}
+=========================================Object=========================================
+It is an unordered set of name/value pairs.
+Objects are enclosed in curly braces that is, it starts with '{' and ends with '}'.
+Each name is followed by ':'(colon) and the key/value pairs are separated by , (comma).
+The keys must be strings and should be different from each other.
+Objects should be used when the key names are arbitrary strings.
+
+Syntax
+{ string : value, .......}
+Example
+Example showing Object −
+
+{
+   "id": "011A",
+   "language": "JAVA",
+   "price": 500,
+}
+
+=================================null===============================================================
+It means empty type.
+
+Syntax
+null
+Example
+var i = null;
+
+if(i == 1) {
+   document.write("<h1>value is 1</h1>");
+} else {
+   document.write("<h1>value is null</h1>");
+}
+
+=============================================Whitespace========================================
+It can be inserted between any pair of tokens. It can be added to make a code more readable. Example shows declaration with and without whitespace −
+
+Syntax
+{string:" ",....}
+Example
+var obj1 = {"name": "Sachin Tendulkar"}
+var obj2 = {"name": "SauravGanguly"}
+
+=============================================JSON Value=========================================
+It includes −
+
+number (integer or floating point)
+string
+boolean
+array
+object
+null
+
+Syntax
+String | Number | Object | Array | TRUE | FALSE | NULL
+
+Example
+var i = 1;
+var j = "sachin";
+var k = null;
+
+============================================JSON - Objects====================================================
+Creating Simple Objects
+JSON objects can be created with JavaScript. Let us see the various ways of creating JSON objects using JavaScript −
+
+Creation of an empty Object −
+var JSONObj = {};
+
+Creation of a new Object −
+var JSONObj = new Object();
+
+Creation of an object with attribute bookname with value in string, attribute price with numeric value. 
+Attribute is accessed by using '.' Operator −
+
+var JSONObj = { "bookname ":"VB BLACK BOOK", "price":500 };
+This is an example that shows creation of an object in javascript using JSON, save the below code as json_object.htm −
+
+<html>
+   <head>
+      <title>Creating Object JSON with JavaScript</title>
+      <script language = "javascript" >
+         var JSONObj = { "name" : "tutorialspoint.com", "year"  : 2005 };
+		
+         document.write("<h1>JSON with JavaScript example</h1>");
+         document.write("<br>");
+         document.write("<h3>Website Name = "+JSONObj.name+"</h3>");  
+         document.write("<h3>Year = "+JSONObj.year+"</h3>");  
+      </script>
+   </head>
+   
+   <body>
+   </body>	
+</html>
+
+=============================================Creating Array Objects===================================
+The following example shows creation of an array object in javascript using JSON, save the below code as json_array_object.htm −
+
+<html>
+   <head>
+      <title>Creation of array object in javascript using JSON</title>
+      <script language = "javascript" >
+         document.writeln("<h2>JSON array object</h2>");
+         var books = { "Pascal" : [ 
+            { "Name"  : "Pascal Made Simple", "price" : 700 },
+            { "Name"  : "Guide to Pascal", "price" : 400 }],  
+				
+            "Scala"  : [
+               { "Name"  : "Scala for the Impatient", "price" : 1000 }, 
+               { "Name"  : "Scala in Depth", "price" : 1300 }]    
+         }    
+         var i = 0
+         document.writeln("<table border = '2'><tr>");
+			
+         for(i = 0;i<books.Pascal.length;i++) {	
+            document.writeln("<td>");
+            document.writeln("<table border = '1' width = 100 >");
+            document.writeln("<tr><td><b>Name</b></td><td width = 50>" + books.Pascal[i].Name+"</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td width = 50>" + books.Pascal[i].price +"</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+         }
+
+         for(i = 0;i<books.Scala.length;i++) {
+            document.writeln("<td>");
+            document.writeln("<table border = '1' width = 100 >");
+            document.writeln("<tr><td><b>Name</b></td><td width = 50>" + books.Scala[i].Name+"</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td width = 50>" + books.Scala[i].price+"</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+         }
+			
+         document.writeln("</tr></table>");
+      </script>
+   </head>
+   
+   <body>
+   </body>
+</html>
+
+=========================================JSON - Schema=========================================================================
+*Describes your existing data format.
+*Clear, human- and machine-readable documentation.
+*Complete structural validation, useful for automated testing.
+*Complete structural validation, validating client-submitted data.
+
+----------JSON Schema Validation Libraries--------------------------------
+There are several validators currently available for different programming languages.
+ Currently the most complete and compliant JSON Schema validator available is JSV.
+ 
+ Languages	  Libraries
+ 
+  C	          WJElement (LGPLv3)
+  Java	     json-schema-validator (LGPLv3)
+ .NET	     Json.NET (MIT)
+ 
+ --------------------------------JSON Schema Example--------------------------------------
+Given below is a basic JSON schema, which covers a classical product catalog description −
+
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Product",
+   "description": "A product from Acme's catalog",
+   "type": "object",
+	
+   "properties": {
+	
+      "id": {
+         "description": "The unique identifier for a product",
+         "type": "integer"
+      },
+		
+      "name": {
+         "description": "Name of the product",
+         "type": "string"
+      },
+		
+      "price": {
+         "type": "number",
+         "minimum": 0,
+         "exclusiveMinimum": true
+      }
+   },
+	
+   "required": ["id", "name", "price"]
+}
+
+Let's the check various important keywords that can be used in this schema −
+Sr.No.	Keyword & Description
+1	$schema
+    The $schema keyword states that this schema is written according to the draft v4 specification.
+	
+2	title
+    You will use this to give a title to your schema.
+
+3	description
+    A little description of the schema.
+
+4	type
+    The type keyword defines the first constraint on our JSON data: it has to be a JSON Object.
+
+5	properties
+    Defines various keys and their value types, minimum and maximum values to be used in JSON file.
+
+6	required
+    This keeps a list of required properties.
+
+7	minimum
+    This is the constraint to be put on the value and represents minimum acceptable value.
+
+8	exclusiveMinimum
+    If "exclusiveMinimum" is present and has boolean value true, the instance is valid if it is strictly greater than the value of "minimum".
+
+9	maximum
+    This is the constraint to be put on the value and represents maximum acceptable value.
+	
+10	exclusiveMaximum
+    If "exclusiveMaximum" is present and has boolean value true, the instance is valid if it is strictly lower than the value of "maximum".
+
+11	multipleOf
+    A numeric instance is valid against "multipleOf" if the result of the division of the instance by this keyword's value is an integer.
+
+12	maxLength
+    The length of a string instance is defined as the maximum number of its characters.
+
+13	minLength
+    The length of a string instance is defined as the minimum number of its characters.
+
+14	pattern
+    A string instance is considered valid if the regular expression matches the instance successfully.
+	
+=======================================JSON - Comparison with XML====================================================
+JSON and XML are human readable formats and are language independent. They both have support for creation, reading and decoding in real world situations. We can compare JSON with XML, based on the following factors −
+
+Verbose
+XML is more verbose than JSON, so it is faster to write JSON for programmers.
+
+Arrays Usage
+XML is used to describe the structured data, which doesn't include arrays whereas JSON include arrays.
+
+Parsing
+JavaScript's eval method parses JSON. When applied to JSON, eval returns the described object.
+
+Example
+Individual examples of XML and JSON −
+
+JSON
+{
+   "company": Volkswagen,
+   "name": "Vento",
+   "price": 800000
+}
+
+XML
+<car>
+   <company>Volkswagen</company>
+   <name>Vento</name>
+   <price>800000</price>
+</car>
+	
+=================================
+# How to convert JSON into java script object
+
+step1: first open inspect of browser
+step2: open console  ,create variable and json object into backtick
+     
+	   example-
+	         myjson=`{
+                       "name":"Avinash",
+                       "id":121,
+                       "phno":9078563412,
+                       "email":null,
+                       "is_active":true
+                    }`;
+					
+step3:	now write code to convert json object into java script object				
+			   JSON.parse(myjson);
+			   
+			   {
+                "name": "Avinash",
+                 "id": 121,
+                "phno": 9078563412,
+                "email": null,
+                "is_active": true
+              }
+
+Question :How to write  Array in json format?
+Answer- arr=[ "alex","avi@gmail.com","132134133","male"]
+
+Question: What is nested json?             
+answer- json object inside json object is Known as nested json. in below example myobj2 is inside of myobj1
+
+   myobj1={
+    "name":"Avinash",
+    "id":121,
+    "phno":9078563412,
+    "email":null,
+    "is_active":true,
+    "department":["mechanical","computer science","civil","it"], //array
+    "myobj2":{
+        "id":1,
+        "name":"alex",
+        "address":"delhi"
+    }
+}
+
